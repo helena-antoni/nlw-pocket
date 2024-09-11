@@ -7,10 +7,12 @@ async function seed(){
     await db.delete(goals)
 
 
-    const result = await db.insert(goals).values([
-        { title: 'Acordar cedo', desiredWeeklyFrequency:5},
-        { title: 'Me exercitar', desiredWeeklyFrequency:3},
-        { title: 'Meditar', desiredWeeklyFrequency:1},
+    const result = await db
+        .insert(goals)
+        .values([
+            { title: 'Acordar cedo', desiredWeeklyFrequency:5},
+            { title: 'Me exercitar', desiredWeeklyFrequency:3},
+            { title: 'Meditar', desiredWeeklyFrequency:1},
      ]).returning()
 
     const startOfWeek = dayjs().startOf('week')
