@@ -11,8 +11,6 @@ export async function getWeekPendingGoals() {
   const firstDayOfWeek = dayjs().startOf('week').toDate()
   const lastDayOfWeek = dayjs().endOf('week').toDate()
 
-  console.log(lastDayOfWeek.toISOString())
-
   const goalsCreateUpToWeek = db.$with('goals_created_up_to_week').as(
     db
       .select({
