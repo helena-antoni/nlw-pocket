@@ -13,6 +13,8 @@ async function seed(){
             { title: 'Acordar cedo', desiredWeeklyFrequency:5},
             { title: 'Me exercitar', desiredWeeklyFrequency:3},
             { title: 'Meditar', desiredWeeklyFrequency:1},
+            { title: 'Nadar', desiredWeeklyFrequency:1},
+
      ]).returning()
 
     const startOfWeek = dayjs().startOf('week')
